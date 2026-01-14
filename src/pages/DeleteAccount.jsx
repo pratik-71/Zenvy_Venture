@@ -36,7 +36,7 @@ Email: ${formData.email}`;
   };
 
   return (
-    <div className="min-h-screen bg-[#DCEEEF] text-[#1A1A1A] font-sans selection:bg-[#ccff00] selection:text-black overflow-hidden relative">
+    <div className="min-h-screen md:h-screen bg-[#DCEEEF] text-[#1A1A1A] font-sans selection:bg-[#ccff00] selection:text-black overflow-x-hidden md:overflow-hidden relative flex flex-col">
       
       {/* 📐 Technical Background Grid */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
@@ -57,9 +57,8 @@ Email: ${formData.email}`;
       </div>
 
       {/* 🧭 Navbar - Technical/Brutalist */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between border-b border-black/10 bg-[#DCEEEF]/90 backdrop-blur-sm">
-        <div className="flex items-center gap-6 pl-0 md:pl-20">
-             {/* Back Button */}
+      <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between border-b border-black/10 bg-[#DCEEEF]/90 backdrop-blur-sm">
+        <div className="flex items-center gap-4 md:gap-6 pl-0 md:pl-20">
              {/* Back Button */}
             <button 
                 onClick={() => navigate('/')} 
@@ -81,14 +80,14 @@ Email: ${formData.email}`;
         </div>
       </nav>
 
-      {/* 🚀 Main Content - Fixed to fit screen */}
-      <main className="relative z-10 pt-20 px-6 h-screen flex flex-col max-w-7xl mx-auto md:pl-[100px] lg:pr-[10vw]">
+      {/* 🚀 Main Content - Scrollable on mobile, Fixed on Desktop */}
+      <main className="relative z-10 pt-24 md:pt-20 px-4 md:px-6 flex-1 flex flex-col max-w-7xl w-full mx-auto md:pl-[100px] lg:pr-[10vw]">
         
         {/* Header HUD - Compact */}
-        <div className="shrink-0 mb-8 relative">
-            <div className="absolute -left-6 top-2 w-3 h-3 bg-black/20 rounded-full" />
+        <div className="shrink-0 mb-6 md:mb-8 relative">
+            <div className="absolute -left-6 top-2 w-3 h-3 bg-black/20 rounded-full hidden md:block" />
             <div className="flex flex-col md:flex-row items-end justify-between gap-4 border-b border-black/10 pb-4">
-                <div>
+                <div className="w-full">
                     <div className="flex items-center gap-2 mb-1">
                         <span className="px-1.5 py-0.5 bg-red-600 text-white text-[10px] uppercase font-mono tracking-widest">Sys: Critical</span>
                         <div className="h-px w-12 bg-black/20" />
@@ -100,8 +99,8 @@ Email: ${formData.email}`;
             </div>
         </div>
 
-        {/* Content Area - Fits remaining height */}
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 min-h-0 pb-8">
+        {/* Content Area - Fits remaining height on desktop */}
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 pb-8 md:min-h-0 min-h-full">
             
             {/* Left Info Column */}
             <div className="md:col-span-4 flex flex-col justify-center">
