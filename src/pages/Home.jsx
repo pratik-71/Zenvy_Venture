@@ -84,7 +84,7 @@ const Home = () => {
         {/* Header HUD */}
         <div className="mb-8 relative">
            
-            <div className="flex flex-col md:flex-row items-end justify-between gap-8 border-b border-black/10 pb-8">
+            <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 border-b border-black/10 pb-8">
                 <div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-black tracking-tighter uppercase mb-4 leading-[0.9]">
