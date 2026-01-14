@@ -104,13 +104,18 @@ Email: ${formData.email}`;
             
             {/* Left Info Column */}
             <div className="md:col-span-4 flex flex-col justify-center">
-                <div className="bg-[#DCEEEF] border border-black/10 p-6 relative group hover:border-black transition-all">
-                     <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-black opacity-20 group-hover:opacity-100 transition-opacity" />
+                <div className="bg-white border-2 border-black shadow-[8px_8px_0px_0px_#1a1a1a] p-6 relative group">
+                     {/* Corner Accents - Permanent */}
+                     <div className="absolute -top-[2px] -left-[2px] w-2 h-2 border-t-2 border-l-2 border-black z-20" />
+                     <div className="absolute -top-[2px] -right-[2px] w-2 h-2 border-t-2 border-r-2 border-black z-20" />
+                     <div className="absolute -bottom-[2px] -left-[2px] w-2 h-2 border-b-2 border-l-2 border-black z-20" />
+                     <div className="absolute -bottom-[2px] -right-[2px] w-2 h-2 border-b-2 border-r-2 border-black z-20" />
+
                      <h3 className="text-lg font-bold uppercase tracking-tighter mb-3">Protocol Details</h3>
-                     <p className="text-xs font-mono text-neutral-600 leading-relaxed mb-4">
+                     <p className="text-xs font-mono text-neutral-600 leading-relaxed mb-4 font-medium">
                         You are about to initiate a permanent data deletion sequence. This process is irreversible and will purge all records associated with the target project.
                      </p>
-                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase text-red-600">
+                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase text-red-600 bg-red-50 w-fit px-2 py-1 border border-red-100">
                         <AlertTriangle className="h-4 w-4" />
                         <span>Irreversible Action</span>
                      </div>
@@ -119,36 +124,38 @@ Email: ${formData.email}`;
 
             {/* Right Form Column */}
             <div className="md:col-span-8 flex flex-col justify-center">
-                 <form onSubmit={handleSubmit} className="w-full max-w-2xl bg-[#DCEEEF] p-6 border border-black/10 relative">
-                     {/* Corner Accents */}
-                    <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-black opacity-20" />
-                    <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-black opacity-20" />
+                 <form onSubmit={handleSubmit} className="w-full max-w-2xl bg-white p-8 border-2 border-black shadow-[8px_8px_0px_0px_#1a1a1a] relative">
+                     {/* Corner Accents - Permanent */}
+                    <div className="absolute -top-[2px] -left-[2px] w-3 h-3 border-t-4 border-l-4 border-black z-20" />
+                    <div className="absolute -top-[2px] -right-[2px] w-3 h-3 border-t-4 border-r-4 border-black z-20" />
+                    <div className="absolute -bottom-[2px] -left-[2px] w-3 h-3 border-b-4 border-l-4 border-black z-20" />
+                    <div className="absolute -bottom-[2px] -right-[2px] w-3 h-3 border-b-4 border-r-4 border-black z-20" />
                     
-                    <div className="space-y-5">
+                    <div className="space-y-8">
                         {/* Project Select */}
                         <div>
-                            <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1.5 block">Target Project</label>
+                            <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-2 block">Target Project</label>
                             <div className="relative group">
                                 <AppWindow className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/40 group-focus-within:text-black transition-colors z-10" />
                                 <select 
                                     name="project"
                                     value={formData.project}
                                     onChange={handleChange}
-                                    className="w-full bg-transparent border-b-2 border-black/10 py-2 pl-10 pr-8 text-base font-mono focus:outline-none focus:border-black transition-all appearance-none rounded-none cursor-pointer uppercase"
+                                    className="w-full bg-neutral-50 border border-black/20 hover:border-black focus:border-black py-3 pl-10 pr-8 text-base font-mono focus:outline-none transition-all appearance-none rounded-none cursor-pointer uppercase font-medium shadow-sm"
                                 >
                                     <option value="Memories">Memories App</option>
                                     <option value="Maxxed">Maxxed</option>
                                 </select>
-                                <CornerRightDown className="absolute right-0 bottom-3 h-3 w-3 text-black/20 pointer-events-none" />
+                                <CornerRightDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/20 pointer-events-none" />
                             </div>
                         </div>
 
                         {/* Email & Username */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1.5 block">Email_ID</label>
+                                <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-2 block">Email_ID</label>
                                 <div className="relative group">
-                                    <Mail className="absolute left-0 bottom-2.5 h-4 w-4 text-black/40" />
+                                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/40 group-focus-within:text-black transition-colors" />
                                     <input 
                                         type="email" 
                                         name="email"
@@ -156,14 +163,14 @@ Email: ${formData.email}`;
                                         value={formData.email}
                                         onChange={handleChange}
                                         placeholder="USER@DOMAIN.COM"
-                                        className="w-full bg-transparent border-b-2 border-black/10 py-1.5 pl-6 text-black font-mono text-sm placeholder-black/30 focus:outline-none focus:border-black transition-all uppercase"
+                                        className="w-full bg-neutral-50 border border-black/20 hover:border-black focus:border-black py-3 pl-10 text-black font-mono text-sm placeholder-black/30 focus:outline-none transition-all uppercase font-medium shadow-sm"
                                     />
                                 </div>
                             </div>
                             <div>
-                                <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1.5 block">User_Handle</label>
+                                <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-2 block">User_Handle</label>
                                 <div className="relative group">
-                                    <User className="absolute left-0 bottom-2.5 h-4 w-4 text-black/40" />
+                                    <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/40 group-focus-within:text-black transition-colors" />
                                     <input 
                                         type="text" 
                                         name="username"
@@ -171,7 +178,7 @@ Email: ${formData.email}`;
                                         value={formData.username}
                                         onChange={handleChange}
                                         placeholder="@HANDLE"
-                                        className="w-full bg-transparent border-b-2 border-black/10 py-1.5 pl-6 text-black font-mono text-sm placeholder-black/30 focus:outline-none focus:border-black transition-all uppercase"
+                                        className="w-full bg-neutral-50 border border-black/20 hover:border-black focus:border-black py-3 pl-10 text-black font-mono text-sm placeholder-black/30 focus:outline-none transition-all uppercase font-medium shadow-sm"
                                     />
                                 </div>
                             </div>
@@ -179,21 +186,21 @@ Email: ${formData.email}`;
 
                         {/* Reason */}
                         <div>
-                            <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-1.5 block">Reason_Log</label>
+                            <label className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-widest mb-2 block">Reason_Log</label>
                             <textarea 
                                 name="reason"
                                 value={formData.reason}
                                 onChange={handleChange}
                                 rows="3"
                                 placeholder="PROVIDE CONTEXT..."
-                                className="w-full bg-transparent border-b-2 border-black/10 py-1.5 text-black font-mono text-sm placeholder-black/30 focus:outline-none focus:border-black transition-all uppercase resize-none"
+                                className="w-full bg-neutral-50 border border-black/20 hover:border-black focus:border-black py-3 px-4 text-black font-mono text-sm placeholder-black/30 focus:outline-none transition-all uppercase resize-none font-medium shadow-sm"
                             />
                         </div>
 
                         <div className="pt-2">
                              <button 
                                 type="submit"
-                                className="w-full md:w-auto group flex items-center justify-center gap-3 px-6 py-3 bg-red-600 text-white font-bold uppercase tracking-wider hover:bg-black hover:text-[#D9FF00] transition-all text-xs md:text-sm"
+                                className="w-full md:w-auto group flex items-center justify-center gap-3 px-8 py-4 bg-red-600 border-2 border-transparent hover:border-black hover:shadow-[4px_4px_0px_0px_black] text-white font-bold uppercase tracking-wider hover:bg-red-500 transition-all text-sm rounded-lg"
                             >
                                 <Trash2 className="h-4 w-4" />
                                 <span>Execute Deletion</span>
