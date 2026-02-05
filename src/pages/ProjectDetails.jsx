@@ -138,7 +138,7 @@ const ProjectDetails = () => {
              
              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl w-full">
                 <button 
-                    onClick={() => navigate(`/contact-us?project=${encodeURIComponent(project.title)}&subject=Privacy%20Policy`)}
+                    onClick={() => navigate(`/${project.id}/privacy-policy`)}
                     className="flex items-center justify-between px-6 py-4 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#000] transition-all group text-sm font-bold uppercase tracking-wider"
                 >
                     <span className="flex items-center gap-3">
@@ -149,7 +149,7 @@ const ProjectDetails = () => {
                 </button>
 
                 <button 
-                    onClick={() => navigate(`/contact-us?project=${encodeURIComponent(project.title)}&subject=Terms%20Conditions`)}
+                    onClick={() => navigate(`/${project.id}/terms-conditions`)}
                     className="flex items-center justify-between px-6 py-4 bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#000] transition-all group text-sm font-bold uppercase tracking-wider"
                 >
                      <span className="flex items-center gap-3">
