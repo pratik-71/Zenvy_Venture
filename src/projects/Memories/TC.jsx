@@ -54,7 +54,7 @@ export default function TermsConditions() {
                         Terms & Conditions
                     </h1>
                     <p className="font-mono text-neutral-500 text-xs uppercase tracking-widest">
-                        Last Updated: August 24, 2024 // Revision 1.0
+                        Last Updated: January 16, 2026 // Revision 2.0
                     </p>
                 </div>
 
