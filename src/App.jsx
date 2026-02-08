@@ -5,6 +5,8 @@ import MemoriesPP from './projects/Memories/PP';
 import MemoriesTC from './projects/Memories/TC';
 import MaxxedPP from './projects/Maxxed/PP';
 import MaxxedTC from './projects/Maxxed/TC';
+import LookMaxxPP from './projects/LookMaxx/PP';
+import LookMaxxTC from './projects/LookMaxx/TC';
 import ProjectDetails from './pages/ProjectDetails';
 
 function App() {
@@ -16,6 +18,10 @@ function App() {
           <Route path="/project/:projectId" element={<ProjectDetails />} />
           <Route path="/contact-us" element={<ContactUs />} />
           
+          {/* LookMaxx Project Routes */}
+          <Route path="/lookmaxx/privacy-policy" element={<LookMaxxPP />} />
+          <Route path="/lookmaxx/terms-conditions" element={<LookMaxxTC />} />
+
           {/* Memories Project Routes */}
           <Route path="/memories/privacy-policy" element={<MemoriesPP />} />
           <Route path="/memories/terms-conditions" element={<MemoriesTC />} />
