@@ -1,6 +1,44 @@
-import { Grid, Component, ScanFace } from 'lucide-react';
+import { Grid, Component, ScanFace, Sprout } from 'lucide-react';
 
 export const projects = [
+  {
+    id: 'higher',
+    title: 'Higher',
+    summary: 'Daily Gita Wisdom & AI Spiritual Companion. Experience divine guidance and spiritual peace.',
+    promotionText: 'Connect with Lord Krishna’s wisdom through daily Gita verses and personalized AI guidance. Higher is your companion for spiritual growth and mental peace.',
+    description: `Experience Divine Wisdom Every Day
+    
+Higher is a spiritual companion designed to bring the timeless wisdom of the Bhagavad Gita into your daily life. Whether you seek peace, motivation, or guidance, Higher connects you with personalized insights through advanced AI and sacred scripture.
+
+Daily Gita Wisdom
+• Receive carefully curated verses from the Bhagavad Gita
+• Explore practical, life-lesson-oriented interpretations
+• Set daily reminders to stay connected with your spiritual path
+
+Krishna AI Companion
+• Chat with a spiritual assistant that embodies the compassionate persona of Lord Krishna
+• Seek guidance on life's challenges through the lens of timeless wisdom
+• Experience a unique, reflective dialogue focused on your growth
+
+Mindfulness & Reminders
+• Personalize your notification frequency for daily spiritual nudges
+• Create a consistent habit of reflection and manifestation
+• Track your spiritual journey with a dedicated streak system
+
+Premium Aesthetics
+• Enjoy a serene, dark-themed interface with smooth animations
+• Experience a premium, distraction-free environment for reflection
+• Beautifully crafted "Higher" splash screen to start your journey with peace
+
+Start your path to a higher state of mind today with Higher.`,
+    icon: "/App_Icons/higher.png",
+    privacyLink: '/higher/privacy-policy',
+    termsLink: '/higher/terms-conditions',
+    contactEmail: 'zenvyventures@gmail.com',
+    iosUrl: 'https://apps.apple.com/app/id6741757827',
+    androidUrl: '', 
+    shareUrl: 'https://apps.apple.com/app/id6741757827'
+  },
   {
     id: 'lookmaxx',
     title: 'LookMaxx',

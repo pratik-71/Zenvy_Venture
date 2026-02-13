@@ -7,6 +7,8 @@ import MaxxedPP from './projects/Maxxed/PP';
 import MaxxedTC from './projects/Maxxed/TC';
 import LookMaxxPP from './projects/LookMaxx/PP';
 import LookMaxxTC from './projects/LookMaxx/TC';
+import HigherPP from './projects/Higher/PP';
+import HigherTC from './projects/Higher/TC';
 import ProjectDetails from './pages/ProjectDetails';
 
 function App() {
@@ -18,6 +20,10 @@ function App() {
           <Route path="/project/:projectId" element={<ProjectDetails />} />
           <Route path="/contact-us" element={<ContactUs />} />
           
+          {/* Higher Project Routes */}
+          <Route path="/higher/privacy-policy" element={<HigherPP />} />
+          <Route path="/higher/terms-conditions" element={<HigherTC />} />
+
           {/* LookMaxx Project Routes */}
           <Route path="/lookmaxx/privacy-policy" element={<LookMaxxPP />} />
           <Route path="/lookmaxx/terms-conditions" element={<LookMaxxTC />} />
